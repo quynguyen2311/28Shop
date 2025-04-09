@@ -1,0 +1,27 @@
+:root{
+    /* màu chủ đạo */
+    --primary-color: #FFFFFF;
+    /* màu phụ */
+    --secondary-color: #F2F0F1;
+    /* mà nhấn  */
+    --accent-color: #000000;
+
+    /* màu phụ cho font */
+    --secondary-font: #00000066;
+}
+/* font */
+.be-vietnam-pro-regular {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.be-vietnam-pro-extrabold {
+    font-family: 'Be Vietnam Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+}
+
+
+  

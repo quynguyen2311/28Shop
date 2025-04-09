@@ -28,9 +28,10 @@ html{
 .topheader > p > a{
     color:var(--primary-color);
 }
-.topheader > img{
+.topheader > span{  
     position: absolute;
     right:6.25rem;
+    color: white;
 }
 /* HEADER */
 .header{
@@ -45,6 +46,9 @@ html{
 .header__logo{
     position: absolute; 
     left: 6.25rem;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
 }
 .header__shop{
     position: absolute;
@@ -393,10 +397,12 @@ html{
 
 /* info */
 .info{
-    padding: 140px 6.25em;
+    padding: 140px 0;
+    margin: 0 6.25em;
     display: flex;
-    justify-content: center;
-    gap:7em;
+    justify-content: space-between;
+    /* gap:7em; */
+    border-bottom: 2px solid #0000001A;
 }
 #info_1{
     width: 248px;
@@ -451,3 +457,32 @@ html{
 .infoDescription >ul > li{
     margin-top:26px;
 }   
+
+.pay_info{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 1.25em 6.25rem 5.123em 6.25rem;
+}
+.pay_info > p{
+    color: #00000099;
+    font-family: 'Be Vietnam Pro';
+    font-weight: 400;
+    font-size: 14px;
+}
+.pay_method{
+    display: flex;
+    gap: 12px;
+}
+.pay_method--items{
+    width: 47px;
+    height:30px;
+    background-color:white;
+    border-radius: 5.38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

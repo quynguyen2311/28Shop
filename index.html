@@ -21,12 +21,17 @@
         <!-- Header -->
         <div class="topheader">
             <p class="be-vietnam-pro-regular">Đăng ký để được giảm giá 20%. <a href="#"> Đăng ký ngay</a> </p>
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined" id="topheader__close">
                 close
-                </span>
+            </span>
         </div>
         <div class="header">
-            <h3 class="header__logo">28.SHOP</h3>
+            <div class="header_left">
+                <span class="material-symbols-outlined" id="header__menu">
+                    menu
+                </span>
+                <h3 class="header__logo">28.SHOP</h3>
+            </div>
             <ul class="header__list be-vietnam-pro-regular">
                 <li>Giới thiệu</li>
                 <li>Sản phẩm</li>
@@ -37,39 +42,50 @@
                 <img src="./assets/header/search.png" alt="search" width="20px" height="20px">
                 <input type="text" placeholder="Tìm kiếm sản phẩm">
             </form>
-            <span class="material-symbols-outlined header__shop">
-                shopping_cart
-            </span>
-            <span class="material-symbols-outlined header__account">
-                account_circle
-            </span>
+            
+            <div class="header_right">
+                <span class="material-symbols-outlined" id="header__search">
+                    search
+                </span>
+                <span class="material-symbols-outlined header__shop">
+                    shopping_cart
+                </span>
+                <span class="material-symbols-outlined header__account">
+                    account_circle
+                </span>
+            </div>
         </div>
 
         <!-- Herosection -->
         <div class="herosection">
+
             <img class="herosection__leftStar" src="./assets/body/herosection/star.png" alt="star" width="56px"
                 height="56px">
             <img class="herosection__rightStar" src="./assets/body/herosection/star.png" alt="star" width="104px"
                 height="104px">
-            <h1 class="be-vietnam-pro-extrabold">CHUYÊN THỜI TRANG PHONG CÁCH, HIỆN ĐẠI</h1>
-            <p class="be-vietnam-pro-regular">Chúng tôi chuyên cung cấp nhiều loại quần áo được chế tác tỉ mỉ, được
-                thiết kế để làm nổi bật cá
-                tính của bạn và đáp ứng phong cách của bạn.</p>
-            <button class="be-vietnam-pro-regular">Xem Ngay</button>
-            <div class="herosection__description">
-                <div class="herosection__description--200">
-                    <h1>200+</h1>
-                    <p>Thương Hiệu</p>
-                </div>
-                <div class="herosection__description--2000">
-                    <h1>2,000+</h1>
-                    <p>Sản Phẩm Chất Lượng</p>
-                </div>
-                <div class="herosection__description--30000">
-                    <h1>30,000+</h1>
-                    <p>Khách Hàng</p>
-                </div>
+
+            <div class="herosection__info">
+                <h1>CHUYÊN THỜI TRANG PHONG CÁCH, HIỆN ĐẠI</h1>
+                <p class="be-vietnam-pro-regular">Chúng tôi chuyên cung cấp nhiều loại quần áo được chế tác tỉ mỉ, được
+                    thiết kế để làm nổi bật cá
+                    tính của bạn và đáp ứng phong cách của bạn.</p>
+                <button class="be-vietnam-pro-regular">Xem Ngay</button>
+                <div class="herosection__description">
+                    <div class="herosection__description--200">
+                        <h1>200+</h1>
+                        <p>Thương Hiệu</p>
+                    </div>
+                    <div class="herosection__description--2000">
+                        <h1>2,000+</h1>
+                        <p>Sản Phẩm Chất Lượng</p>
+                    </div>
+                    <div class="herosection__description--30000">
+                        <h1>30,000+</h1>
+                        <p>Khách Hàng</p>
+                    </div>
+                </div>  
             </div>
+            <img class="herosection__image" src="./assets/body/herosection/herosection_test.png">
         </div>
 
         <div class="brand">
@@ -302,7 +318,7 @@
                     </ul>
                 </div>
                 <div class="infoDescription">
-                    <h4>Trợ giúp</h4>
+                    <h4>TRỢ GIÚP</h4>
                     <ul>
                         <li>Hỗ Trợ Khách Hàng</li>
                         <li>Thông Tin Đơn Hàng</li>
@@ -320,7 +336,7 @@
                     </ul>
                 </div>
                 <div class="infoDescription">
-                    <h4>Tài nguyên</h4>
+                    <h4>TÀI NGUYÊN</h4>
                     <ul>
                         <li>Sách Miễn Phí</li>
                         <li>Bài Viết</li>

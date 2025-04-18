@@ -8,10 +8,9 @@ html{
     font-size:16px;
 }   
 .root{
-    min-width: 1440px;
     max-width: 1960px;
+    min-width: 400px;
 }
-
 /* TOP HEADER */
 .topheader{
     height:2.375rem;
@@ -38,29 +37,34 @@ html{
     padding: 1.5rem 6.25rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap:2.5rem;
+    /* justify-content: space-between; */
+    gap: 3.125rem;
     position: relative;
     background-color: white;
 }
 .header__logo{
-    position: absolute; 
-    left: 6.25rem;
+    /* position: absolute;  */
+    /* left: 6.25rem; */
     font-family: "Be Vietnam Pro", sans-serif;
-    font-weight: 700;
-    font-size: 32px;
+    font-weight: 800;
+    font-size: 2rem;
 }
-.header__shop{
-    position: absolute;
-    right: 10rem;
+#header__search{
+    display: none;
 }
-.header__account{
-    position: absolute;
-    right: 6.25rem;
+.header_right{
+    display: flex;
+    justify-content: center;
+    gap:0.991rem;
+}
+#header__menu{
+    display: none;
 }
 .header__list{
     display: flex;
-    gap:1.5rem;
+    /* gap:1.5rem; */
+    width: 24rem;
+    justify-content: space-between;
     list-style: none;
 }
 .header__list > li{
@@ -72,7 +76,8 @@ html{
     gap:0.75em;
     padding: 0 1.063rem;
     background-color: #F0F0F0;
-    width: 35.188em;
+    flex-grow: 1;
+    /* width: 41.438rem; */
     height: 3em;
     border-radius: 62px;
 }
@@ -84,12 +89,12 @@ html{
     background-color: inherit;
 }
 .header > form > input::placeholder{
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 400;
 }
 .header > form > input[type="text"]{
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 400;
     color:#00000066;
@@ -98,12 +103,13 @@ html{
 /* HEROSECTION */
 .herosection{
     width: 100%;
-    height: 663px;
-    background-image: url(./assets/body/herosection/herosection.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: max-content;
+    justify-content: center;
+    background-color: var(--secondary-color);
     position: relative;
+    align-items: center;
     padding:0 6.26rem;  
+    display: flex;
 }
 .herosection__leftStar{
     position: absolute;
@@ -115,22 +121,28 @@ html{
     top:5.35rem;
     right:6.25rem;
 }
-.herosection > h1{
-    width: 37.5rem;
-    position: absolute;
-    top:8.625rem;
+.herosection__info{
+    width: 50%;
 }
-.herosection > p{   
-    position: absolute;
+.herosection__info > h1{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    /* width: 37.5em; */
+    width: 100%;
+    max-width: 600px;
+}
+.herosection__info > p{   
+    font-size: 1em;
     color: var(--secondary-font);
-    width: 36.875rem;
-    top:17rem;
+    width: 36.875em;
+    margin-top:1.875rem;
+    margin-bottom: 3.125rem;
 }
-.herosection > button{
-    position: absolute;
+.herosection__info > button{
     width: 13.125rem;
     height:3.25rem;
-    top:22.25rem;
+    margin-bottom: 50px;
     background-color: var(--accent-color);
     border-radius: 62px;
     color:var(--primary-color);
@@ -139,8 +151,6 @@ html{
 .herosection__description{
     display: flex;
     gap:2em;
-    position: absolute;
-    top:28.75rem;
 }
 .herosection__description--2000{
     width:max-content;
@@ -151,13 +161,18 @@ html{
 .herosection__description > div > h1{
     font-family: 'Be Vietnam Pro';
     font-weight: 700;
-    font-size: 40px;    
+    font-size: 2.5rem;    
 }
 .herosection__description > div > p{
     font-family: 'Be Vietnam Pro';
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--secondary-font);
+}
+.herosection__image{
+    object-fit:contain;
+    width: 50%;
+    height: 100%;
 }
 
 /* BRAND */
@@ -485,4 +500,133 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* RESPONSIVE */
+/* IPAD DEVICEs */ 
+@media screen and (max-width: 1400px){
+    html{
+        font-size: 14px;
+    }
+    .herosection__leftStar{
+        width: 50px;
+        height: 50px;
+    }
+    .herosection__rightStar{
+        width: 98px;
+        height: 98px;
+    }
+}
+@media screen and (max-width: 1340px){
+    html{
+        font-size: 12px;
+    }
+    .herosection__leftStar{
+        width: 44px;
+        height: 44px;
+    }
+    .herosection__rightStar{
+        width: 92px;
+        height: 92px;
+    }
+}
+@media screen and (max-width: 1240px){
+    html{
+        font-size: 10px;
+    }
+    .herosection__leftStar{
+        width: 36px;
+        height: 36px;
+    }
+    .herosection__rightStar{
+        width: 75px;
+        height: 75px;
+    }
+}
+
+/* Mành hình điện thoại */
+@media screen and (max-width: 900px){
+    html{
+        font-size: 14px;
+    }
+    
+    #topheader__close{
+        display: none;
+    }
+    .header__list{
+        display:none;
+    }
+    /* Search bar */
+    .header>form{
+        display: none;
+    }
+
+    .header_left{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header{
+        justify-content: space-between;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .header_right{
+        gap:0.867rem;
+    }
+    #header__search{
+        display: inline;
+    }
+    #header__menu{
+        display: inline;
+    }
+
+    /* herosection */
+    .herosection__leftStar,
+    .herosection__rightStar{
+        display: none;
+    }
+    .herosection{
+        flex-direction: column;
+        align-items: center;
+        padding: 2.5rem 1.25rem 0 1.25rem;
+    }
+    .herosection__image{
+        width: 100%;
+    }
+    .herosection__info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .herosection__info>h1{
+        width: 80%;
+        text-align:left;
+    }
+    .herosection__info>p{
+        width: 80%;
+        height: 3.125rem;
+        text-align: left;
+    }
+    .herosection__info>button{
+        width: 80%;
+        height: 52px;
+    }
+}
+@media screen and (max-width: 700px){
+    html{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 580px){
+    html{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 500px){
+    html{
+        font-size: 8px;
+    }
 }

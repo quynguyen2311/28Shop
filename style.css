@@ -43,8 +43,6 @@ html{
     background-color: white;
 }
 .header__logo{
-    /* position: absolute;  */
-    /* left: 6.25rem; */
     font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 800;
     font-size: 2rem;
@@ -62,7 +60,6 @@ html{
 }
 .header__list{
     display: flex;
-    /* gap:1.5rem; */
     width: 24rem;
     justify-content: space-between;
     list-style: none;
@@ -77,7 +74,6 @@ html{
     padding: 0 1.063rem;
     background-color: #F0F0F0;
     flex-grow: 1;
-    /* width: 41.438rem; */
     height: 3em;
     border-radius: 62px;
 }
@@ -128,7 +124,6 @@ html{
     font-family: "Be Vietnam Pro", sans-serif;
     font-size: 3rem;
     font-weight: 900;
-    /* width: 37.5em; */
     width: 100%;
     max-width: 600px;
 }
@@ -178,11 +173,16 @@ html{
 /* BRAND */
 .brand{
     background-color: var(--accent-color);
-    height: 122px;
-    padding:0 12.063rem;
+    height: max-content;
+    padding:2.813rem 12.063rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3.75rem;
+}
+.brand > div{
+    display: flex;
+    justify-content: center;
     gap: 3.75rem;
 }
 
@@ -216,6 +216,21 @@ html{
     font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 500;
     font-size: 16px;
+}
+.newFashion__items--upper,
+.newFashion__items--lower{
+    display: flex;
+    gap:1.875rem;
+}
+.newFashion__items--element{
+    flex-grow: 1;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
+}
+.newFashion__items--element > img{  
+    object-fit: contain;
 }
 .newFashion__items--element > h3{
     font-family: 'Be Vietnam Pro';
@@ -299,8 +314,18 @@ html{
 .highlight_category > div{
     gap:1.25rem;
     display: flex;
+    width: 100%;
 }
-.highlight_category--upper{
+.highlight_category--upper > img:nth-child(1),
+.highlight_category--lower > img:nth-child(2){
+    flex: 1;
+}
+.highlight_category--upper > img:nth-child(2),
+.highlight_category--lower > img:nth-child(1){
+    flex: 2;
+}
+.highlight_category--upper,
+.highlight_category--lower{
     margin-bottom: 1.25rem;
 }
 .highlight_category > h1{
@@ -326,11 +351,11 @@ html{
     gap:1.25rem;
 }
 .client_feedback--list > div{
-    width: 400px;
     height: 240px;
     border: 2px solid #0000001A;
     padding:28px 32px;
     border-radius: 20px;
+    flex-shrink: 1;
 }
 .client_feedback--list > div > h3{
     font-family: 'Be Vietnam Pro';
@@ -503,6 +528,12 @@ html{
 }
 
 /* RESPONSIVE */
+/* DESKTOP */
+@media screen and (max-width: 1700px){
+    .highlight_category > div > img{
+        height: 289px;
+    }
+}
 /* IPAD DEVICEs */ 
 @media screen and (max-width: 1400px){
     html{
@@ -515,6 +546,9 @@ html{
     .herosection__rightStar{
         width: 98px;
         height: 98px;
+    }
+    .highlight_category > div > img{
+        height: 229px;
     }
 }
 @media screen and (max-width: 1340px){
@@ -529,6 +563,16 @@ html{
         width: 92px;
         height: 92px;
     }
+    .newFashion__items{
+        flex-direction: column;
+    }
+    .newFashion__items--upper,
+    .newFashion__items--lower{
+        justify-content: center;
+    }
+    .newFashion__items--element{
+        flex-grow: 0;
+    }
 }
 @media screen and (max-width: 1240px){
     html{
@@ -541,6 +585,29 @@ html{
     .herosection__rightStar{
         width: 75px;
         height: 75px;
+    }
+    .brand_upper > img:nth-child(1){
+        width: 116px;
+        height: 24px;
+    }
+    .brand_upper > img:nth-child(2){
+        width: 64px;
+        height: 27px;
+    }
+    .brand_upper > img:nth-child(3){
+        width: 110px;
+        height: 23px;
+    }
+    .brand_lower > img:nth-child(1){
+        width: 127px;
+        height: 21px;
+    } 
+    .brand_lower > img:nth-child(2){
+        width: 135px;
+        height: 22px;
+    }
+    .highlight_category > div > img{
+        height: 209px;
     }
 }
 
@@ -613,6 +680,27 @@ html{
     .herosection__info>button{
         width: 80%;
         height: 52px;
+    }
+    .brand{
+        flex-direction: column;
+        align-items: center;
+    }
+    .highlight_category--upper,
+    .highlight_category--lower{
+        flex-direction: column;
+        align-items: center; 
+    }
+    .highlight_category--upper > img,
+    .highlight_category--lower> img{
+            width: 310px;
+            height: 190px;
+    }   
+    .client_feedback > h1{
+        text-align: start;
+    }
+    .client_feedback--list{
+        flex-direction: column;
+        align-items: center;
     }
 }
 @media screen and (max-width: 700px){

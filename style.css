@@ -9,7 +9,7 @@ html{
 }   
 .root{
     max-width: 1960px;
-    min-width: 400px;
+    min-width: 500px;
 }
 /* TOP HEADER */
 .topheader{
@@ -128,7 +128,7 @@ html{
     max-width: 600px;
 }
 .herosection__info > p{   
-    font-size: 1em;
+    font-size: 1.188rem;
     color: var(--secondary-font);
     width: 36.875em;
     margin-top:1.875rem;
@@ -331,7 +331,7 @@ html{
 .highlight_category > h1{
     font-family: 'Be Vietnam Pro';
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rem;
     margin-bottom: 3.75rem;
 }
 
@@ -360,7 +360,7 @@ html{
 .client_feedback--list > div > h3{
     font-family: 'Be Vietnam Pro';
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.563rem;
     gap:4px;    
     display: flex;
     align-items: center;
@@ -368,11 +368,11 @@ html{
 }
 .client_feedback--list > div > p{
     color: var(--secondary-font);
+    font-size: 1.313rem;
 }
 
 /* footer */
 .footer{
-    height: 500px;
     position: relative;
     background-color: var(--secondary-color);
     margin-top:170px;
@@ -395,8 +395,7 @@ html{
     color: white;
     font-family: 'Be Vietnam Pro';
     font-weight: 700;
-    font-size: 40px;
-    min-width: 550px;
+    font-size: 2.5rem;
 }
 .updateForm{
     display: flex;
@@ -421,6 +420,7 @@ html{
 }
 .updateForm > div >  input::placeholder{
     font-family: 'Be Vietnam Pro';
+    font-size:1rem;
 }
 .updateForm > div > span{
     opacity: 40%;
@@ -441,22 +441,27 @@ html{
     margin: 0 6.25em;
     display: flex;
     justify-content: space-between;
-    /* gap:7em; */
+    background-color: var(--secondary-color);
     border-bottom: 2px solid #0000001A;
 }
 #info_1{
     width: 248px;
 }
+#info_2,
+#info_3{
+    display: flex;
+}
 #info_1 > h3{
     font-family: 'Be Vietnam Pro';
     font-weight: 700;
-    font-size: 33.45px;
+    font-size: 2.5rem;
 }
 #info_1 > p{
     opacity:60%;
     font-family: 'Be Vietnam Pro';
     margin-top: 25px;
     margin-bottom:35px;
+    font-size:1.313rem;
 }
 .socialMedia{
     display: flex;
@@ -483,15 +488,16 @@ html{
 .infoDescription > h4{
     font-family: 'Be Vietnam Pro';
     font-weight: 500;
-    font-size: 16px;
+    font-size:1.625rem;
     line-height:18px;
     letter-spacing: 3px;
+    margin-top: 10px;
 }
 .infoDescription > ul{
     list-style: none;
     font-family: 'Be Vietnam Pro';
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.313rem;
     opacity:60%;
 }
 .infoDescription >ul > li{
@@ -534,6 +540,11 @@ html{
         height: 289px;
     }
 }
+@media screen and (max-width: 1600px){
+    .update{
+        gap: 7rem;
+    }
+}
 /* IPAD DEVICEs */ 
 @media screen and (max-width: 1400px){
     html{
@@ -550,6 +561,12 @@ html{
     .highlight_category > div > img{
         height: 229px;
     }
+    .updateForm > div > input{
+        width: 299px;
+    }
+
+
+    
 }
 @media screen and (max-width: 1340px){
     html{
@@ -572,6 +589,9 @@ html{
     }
     .newFashion__items--element{
         flex-grow: 0;
+    }
+    .info{
+        padding: 100px 0;
     }
 }
 @media screen and (max-width: 1240px){
@@ -609,6 +629,10 @@ html{
     .highlight_category > div > img{
         height: 209px;
     }
+    .updateForm > div > input{
+        width: 249px;
+    }
+
 }
 
 /* Mành hình điện thoại */
@@ -702,10 +726,43 @@ html{
         flex-direction: column;
         align-items: center;
     }
+    .update{
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    .updateForm{
+        width: 100%;
+    }
+    .info{
+        padding: 15.625rem 0 8.75rem 0;
+        flex-wrap: wrap;
+    }
+    #info_1{
+        width: 100%;
+    }
+    .infoDescription{
+        width: 50%;
+        margin-top:2.5rem;
+    }
+    .pay_info{
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 @media screen and (max-width: 700px){
     html{
         font-size: 12px;
+    }
+    .newFashion__items--upper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .newFashion__items--lower{
+        flex-direction: column;
+        align-items: center ;
+    }
+    .info{
+        padding: 17.5rem 0 8.75rem 0;
     }
 }
 @media screen and (max-width: 580px){
@@ -716,5 +773,8 @@ html{
 @media screen and (max-width: 500px){
     html{
         font-size: 8px;
+    }
+    .info{
+        padding: 19.375rem 0 8.75rem 0;
     }
 }

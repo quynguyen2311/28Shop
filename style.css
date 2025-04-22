@@ -3,13 +3,14 @@
     margin: 0;
     padding: 0; 
     box-sizing: border-box;
+    user-select: none;
 }
 html{
     font-size:16px;
 }   
 .root{
     max-width: 1960px;
-    min-width: 500px;
+    min-width: 300px;
 }
 /* TOP HEADER */
 .topheader{
@@ -66,6 +67,11 @@ html{
 }
 .header__list > li{
     min-width: max-content;
+    font-size:1.188rem;
+}
+.header__list > li > a{
+    text-decoration: none;
+    color: black;
 }
 .header > form{
     display: flex;
@@ -90,7 +96,7 @@ html{
     font-weight: 400;
 }
 .header > form > input[type="text"]{
-    font-size: 1rem;
+    font-size: 1.188rem;
     font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 400;
     color:#00000066;
@@ -130,7 +136,7 @@ html{
 .herosection__info > p{   
     font-size: 1.188rem;
     color: var(--secondary-font);
-    width: 36.875em;
+    max-width: 36.875em;
     margin-top:1.875rem;
     margin-bottom: 3.125rem;
 }
@@ -318,11 +324,11 @@ html{
 }
 .highlight_category--upper > img:nth-child(1),
 .highlight_category--lower > img:nth-child(2){
-    flex: 1;
+    flex-grow: 1;
 }
 .highlight_category--upper > img:nth-child(2),
 .highlight_category--lower > img:nth-child(1){
-    flex: 2;
+    flex-grow: 2;
 }
 .highlight_category--upper,
 .highlight_category--lower{
@@ -535,18 +541,16 @@ html{
 
 /* RESPONSIVE */
 /* DESKTOP */
-@media screen and (max-width: 1700px){
-    .highlight_category > div > img{
-        height: 289px;
-    }
-}
 @media screen and (max-width: 1600px){
     .update{
         gap: 7rem;
     }
+    .highlight_category > div > img{
+        height: 300px;
+    }
 }
 /* IPAD DEVICEs */ 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1460px){
     html{
         font-size: 14px;
     }
@@ -558,17 +562,11 @@ html{
         width: 98px;
         height: 98px;
     }
-    .highlight_category > div > img{
-        height: 229px;
-    }
     .updateForm > div > input{
         width: 299px;
     }
-
-
-    
 }
-@media screen and (max-width: 1340px){
+@media screen and (max-width: 1360px){
     html{
         font-size: 12px;
     }
@@ -593,6 +591,11 @@ html{
     .info{
         padding: 100px 0;
     }
+    .highlight_category--upper,
+    .highlight_category--lower{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 @media screen and (max-width: 1240px){
     html{
@@ -607,27 +610,24 @@ html{
         height: 75px;
     }
     .brand_upper > img:nth-child(1){
-        width: 116px;
-        height: 24px;
+        width: 136px;
+        height: 44px;
     }
     .brand_upper > img:nth-child(2){
-        width: 64px;
-        height: 27px;
+        width: 84px;
+        height: 47px;
     }
     .brand_upper > img:nth-child(3){
-        width: 110px;
-        height: 23px;
+        width: 130px;
+        height: 53px;
     }
     .brand_lower > img:nth-child(1){
-        width: 127px;
-        height: 21px;
+        width: 147px;
+        height: 41px;
     } 
     .brand_lower > img:nth-child(2){
-        width: 135px;
-        height: 22px;
-    }
-    .highlight_category > div > img{
-        height: 209px;
+        width: 155px;
+        height: 42px;
     }
     .updateForm > div > input{
         width: 249px;
@@ -693,16 +693,16 @@ html{
         align-items: center;
     }
     .herosection__info>h1{
-        width: 80%;
+        width: 100%;
         text-align:left;
     }
     .herosection__info>p{
-        width: 80%;
-        height: 3.125rem;
+        width: 100%;
         text-align: left;
+        font-size: 1.5rem;
     }
     .herosection__info>button{
-        width: 80%;
+        width: 100%;
         height: 52px;
     }
     .brand{
@@ -713,6 +713,9 @@ html{
     .highlight_category--lower{
         flex-direction: column;
         align-items: center; 
+    }
+    .highlight_category > div > img{
+        width: 100%;
     }
     .highlight_category--upper > img,
     .highlight_category--lower> img{

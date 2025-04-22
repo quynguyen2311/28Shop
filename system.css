@@ -23,5 +23,10 @@
     font-size: 48px;
 }
 
+/* class effect */
+.menu_active{
+    opacity: 50%;
+}
+
 
   

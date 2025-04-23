@@ -19,5 +19,6 @@ function addMenuHoverEffect(array){
 function main(){
     const headerList = document.querySelectorAll(".header__list > li");
     addMenuHoverEffect(headerList);
+    
 }
 main();

@@ -25,7 +25,8 @@
 
 /* class effect */
 .menu_active{
-    opacity: 50%;
+    opacity: 35%;
+    transition: opcity 0.6s ease-in-out;
 }
 
 
